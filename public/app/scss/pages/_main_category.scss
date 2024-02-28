@@ -1,0 +1,102 @@
+.subcategory {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 0 20px 60px 20px;
+    text-align: center;
+    margin: 15px;
+    position: relative;
+    .img-container {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    h3 {
+        color: $Violet-Red;
+        height: 40px;
+    }
+    ul {
+        text-align: left;
+        height: 150px;
+        li {
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: $gray;
+            display: flex;
+            &:before {
+                content: "\f14a";
+                font-family: "Font Awesome 6 Free";
+                margin-#{$right}: 10px;
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $gray;
+        height: 130px;
+        overflow: hidden;
+    }
+    .more {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(83, 84, 83, 0.9);
+        padding-bottom: 20px;
+        opacity: 0;
+        transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+        button {
+            display: flex;
+            background-color: $Green-Blue;
+            color: $white;
+            text-transform: capitalize;
+            font-size: 14px;
+            min-width: 110px;
+            width: auto;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-family: $bold-font;
+            transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+    &:hover {
+        .more {
+            opacity: 1;
+        }
+    }
+}
+
+.business_bg {
+    background: url(../../assets/images/covers/business\ insurance.jpg) center no-repeat;
+    background-size: cover;
+}
+.personal_bg {
+    background: url(../../assets/images/covers/personal.jpg) center no-repeat;
+    background-size: cover;
+}
+.motor_bg {
+    background: url(../../assets/images/covers/private\ motor.jpg) center no-repeat;
+    background-size: cover;
+}
+.travel_bg {
+    background: url(../../assets/images/covers/travel\ &\ medical.jpg) center no-repeat;
+    background-size: cover;
+}
+.blog_bg {
+    background: url(../../assets/images/covers/blogs.jpg) center no-repeat;
+    background-size: cover;
+}
+.travel_insurance {
+    background: url(../../assets/images/covers/travel.jpg) center no-repeat;
+    background-size: cover;
+}

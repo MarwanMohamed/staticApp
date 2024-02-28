@@ -1,0 +1,164 @@
+.header {
+    .top_header {
+        background-color: $Violet-Red;
+        padding: 20px 0;
+        a {
+            color: $white;
+            margin-#{$right}: 10px;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+        ul {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+        .btn {
+            min-width: 142px;
+            width: auto;
+            height: 35px;
+            font-size: 14px;
+            padding: 0 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-family: $bold-font;
+            border: 2px solid $white;
+            color: $white;
+            transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+            &:hover {
+                background-color: $white;
+                color: $Violet-Red;
+            }
+        }
+    }
+    .navbar {
+        img {
+            max-width: 250px;
+        }
+        .nav-link {
+            color: $gray;
+            font-family: $bold-font;
+            text-transform: capitalize;
+            font-size: 17px;
+            padding: 0.5rem 1rem;
+        }
+        .dropdown {
+            .dropdown-item {
+                color: $gray;
+                font-family: $bold-font;
+                text-transform: capitalize;
+                font-size: 14px;
+                &:hover {
+                    background-color: #dee2e6;
+                }
+            }
+            .dropdown-menu {
+                li {
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid $Ghost-White;
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            &:focus {
+                box-shadow: initial;
+            }
+        }
+    }
+    &.page-header {
+        .navbar {
+            background-color: #721530;
+            .nav-link {
+                color: $white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        .navbar {
+            .dropdown {
+                .dropdown-toggle {
+                    &::after {
+                        display: none;
+                    }
+                }
+                .dropdown-menu {
+                    opacity: 0;
+                    transition: all 200ms ease-in;
+                }
+                &:hover {
+                    & > ul.dropdown-menu {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header {
+        .navbar {
+            .nav-link {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background: $white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        .top_header {
+            a {
+                margin: 10px;
+            }
+        }
+        .navbar {
+            img {
+                max-width: 150px;
+            }
+            .nav-link {
+                color: $white;
+            }
+        }
+        .navbar-collapse {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: $Violet-Red;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            padding: 10px;
+            transform: translate(100%, 0);
+            transition: all 0.5s ease-in-out;
+            .navbar-toggler {
+                width: 100%;
+                text-align: right;
+                border: none;
+                color: $white;
+                &:focus {
+                    box-shadow: initial;
+                }
+            }
+            &.show {
+                right: 0;
+                transform: translate(0px, 0px);
+            }
+        }
+    }
+}

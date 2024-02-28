@@ -1,0 +1,43 @@
+.contact_sec {
+    .map {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    h4 {
+        color: $white;
+        font-size: 18px;
+        line-height: 30px;
+        font-family: $bold-font;
+        margin-bottom: 20px;
+    }
+    ul {
+        li {
+            a {
+                font-size: 20px;
+                color: $white;
+                margin-#{$right}: 10px;
+            }
+        }
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        color: $gray;
+        font-family: $bold-font;
+        font-size: 16px;
+        width: 150px;
+        height: 45px;
+        text-transform: capitalize;
+        margin: 20px 0;
+        transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+        &:hover {
+            background-color: transparent;
+            color: $white;
+            border: 2px solid $white;
+        }
+    }
+}

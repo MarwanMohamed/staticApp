@@ -1,0 +1,66 @@
+.about_info {
+    .single-service {
+        text-align: center;
+        margin-bottom: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        padding: 20px 10px;
+        height: 450px;
+        overflow-y: auto;
+        i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: block;
+            color: $Violet-Red;
+        }
+        h3 {
+            font-family: $bold-font;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 28px;
+            text-align: #{$left};
+        }
+    }
+    .contact_sec {
+        background-color: $white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        border-radius: 5px;
+        .map {
+            background-color: $white;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            color: $gray;
+        }
+        ul {
+            li {
+                a {
+                    font-size: 20px;
+                    color: $gray;
+                    margin-#{$right}: 10px;
+                }
+            }
+        }
+        .btn {
+            background-color: $Green-Blue;
+            color: $white;
+            &:hover {
+                background-color: transparent;
+                color: $Green-Blue;
+                border: 2px solid $Green-Blue;
+            }
+        }
+    }
+}
+.about_bg {
+    background: url(../../assets/images/covers/about\ us.jpg) center no-repeat;
+    background-size: cover; 
+}

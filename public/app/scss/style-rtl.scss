@@ -1,0 +1,71 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+    02. import scss files
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+@import "base/_reset";
+@import "base/_variables";
+@import "base/_variables_rtl";
+@import "components/_header";
+@import "components/_page-title";
+@import "components/_quote-form";
+@import "components/_contact-sec";
+@import "components/_quote";
+@import "components/_footer";
+@import "components/_paragraph";
+@import "pages/_index";
+@import "pages/_about";
+@import "pages/_contact";
+@import "pages/_category";
+@import "pages/_business_insurance";
+@import "pages/_main_category";
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+    02. Include Fonts
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+// Add your fonts face here...
+
+// regular
+@font-face {
+    font-family: gess;
+    src: url(../fonts/GESS.otf);
+}
+// bold
+@font-face {
+    font-family: gess-bold;
+    src: url(../fonts/GESS-Bold.otf);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+    03. General Style
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+body {
+    font-family: gess;
+    overflow-x: hidden;
+}
+
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 1320px;
+    }
+}
+
+.page-content {
+    min-height: 500px;
+}
+.slick-prev {
+    z-index: 999;
+}
+input[type="tel"],
+input[type="email"] {
+    text-align: right;
+}
+[dir="rtl"] .slick-next {
+    left: initial;
+}
+.header .top_header a[dir="ltr"], .contact_sec h4, .licence {
+    font-family: gotham;
+}
+.footer {
+    img {
+        padding-left: 25px;
+    }
+}

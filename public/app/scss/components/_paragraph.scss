@@ -1,0 +1,28 @@
+.paragraph {
+    h3 {
+        text-transform: capitalize;
+        font-family: $bold-font;
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: $gray;
+    }
+    p {
+        color: $gray;
+        font-size: 16px;
+    }
+    hr {
+        background-color: rgba(0, 0, 0, 0.12);
+        margin: 30px 0;
+    }
+    ul {
+        li {
+            margin-bottom: 10px;
+            &:before {
+                content: "\f14a";
+                font-family: "Font Awesome 6 Free";
+                color: $Violet-Red;
+                margin-#{$right}: 10px;
+            }
+        }
+    }
+}
