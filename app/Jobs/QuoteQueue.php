@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Mail\QuoteForClientMail;
 use App\Mail\QuoteMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,12 +15,14 @@ class QuoteQueue implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    private $data;
+
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -27,10 +30,10 @@ class QuoteQueue implements ShouldQueue
      */
     public function handle(): void
     {
-        Mail::to('ahmed@a.com')->send(new QuoteMail());
-        Mail::to('mohamed@a.com')->send(new QuoteMail());
-        Mail::to('mohamed@a.com')->send(new QuoteMail());
-        Mail::to('mohamed@a.com')->send(new QuoteMail());
-        Mail::to('mohamed@a.com')->send(new QuoteMail());
+        Mail::to('m.ramadan@qatarbima.com')->send(new QuoteMail($this->data));
+        Mail::to('allan@qatarbima.com')->send(new QuoteMail($this->data));
+        Mail::to('m.saleh@qatarbima.com')->send(new QuoteMail($this->data));
+        Mail::to('maria@qatarbima.com')->send(new QuoteMail($this->data));
+
     }
 }

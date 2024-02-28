@@ -72,6 +72,9 @@
                             </ul>
                         </div>
                     @endif
+                    @if(session()->has('quote_success'))
+                        <div class="alert alert-success">{{ session()->get('quote_success') }}</div>
+                    @endif
                     @csrf
                     <h3><i class="fa-solid fa-envelope-open-text me-2"></i><span>احصل على عرض سعر من
                                 فريقنا</span></h3>

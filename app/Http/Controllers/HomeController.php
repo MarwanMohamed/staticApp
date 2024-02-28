@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\QuoteQueue;
-use App\Mail\QuoteMail;
-use App\Mail\SubscriptionMail;
 use App\Mail\QuoteForClientMail;
-use Illuminate\Http\JsonResponse;
+use App\Mail\SubscriptionMail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -50,36 +48,31 @@ class HomeController extends Controller
         ]);
 
         $data = $request->all();
-        Mail::to('m.ramadan@qatarbima.com')->send(new QuoteMail($data));
-        Mail::to('allan@qatarbima.com')->send(new QuoteMail($data));
-        Mail::to('m.saleh@qatarbima.com')->send(new QuoteMail($data));
-        Mail::to('maria@qatarbima.com')->send(new QuoteMail($data));
-//      QuoteQueue::dispatch();
 
-//        return $this->sendWhatsAppMessage();
+        QuoteQueue::dispatch($data);
+        Mail::to($data['email'])->send(new QuoteForClientMail());
 
-        Mail::to('mohamed@a.com')->send(new QuoteForClientMail());
-
-        return redirect()->back()->with(['success' => 'email send successfully']);
+        $previous = app('url')->previous() . '#quote';
+        return redirect()->to($previous)->with(['quote_success' => trans('messages.quote.done')]);
     }
 
 
-    private function sendWhatsAppMessage(): JsonResponse
-    {
-        $twilio = new Client(env('TWILIO_SID'), env('TWILIO_AUTH_TOKEN'));
-
-        try {
-            $twilio->messages->create(
-                "whatsapp:+" . '201112168033',
-                [
-                    "from" => 'whatsapp:' . env('TWILIO_WHATSAPP_NUMBER'),
-                    "body" => 'Hello From code',
-                ]
-            );
-
-            return response()->json(['message' => 'WhatsApp message sent successfully']);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
+//    private function sendWhatsAppMessage(): JsonResponse
+//    {
+//        $twilio = new Client(env('TWILIO_SID'), env('TWILIO_AUTH_TOKEN'));
+//
+//        try {
+//            $twilio->messages->create(
+//                "whatsapp:+" . '201112168033',
+//                [
+//                    "from" => 'whatsapp:' . env('TWILIO_WHATSAPP_NUMBER'),
+//                    "body" => 'Hello From code',
+//                ]
+//            );
+//
+//            return response()->json(['message' => 'WhatsApp message sent successfully']);
+//        } catch (\Exception $e) {
+//            return response()->json(['error' => $e->getMessage()], 500);
+//        }
+//    }
 }

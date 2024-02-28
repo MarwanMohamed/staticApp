@@ -410,6 +410,9 @@
                             </ul>
                         </div>
                     @endif
+                    @if(session()->has('quote_success'))
+                        <div class="alert alert-success">{{ session()->get('quote_success') }}</div>
+                    @endif
                     @csrf
                     <h3><i class="fa-solid fa-envelope-open-text me-2"></i><span>Get Quote by Our Team </span></h3>
                     <p>We will be glad to support your request and find the right coverage for you.</p>
