@@ -50,18 +50,17 @@ class HomeController extends Controller
         ]);
 
         $data = $request->all();
-//        Mail::to('m.ramadan@qatarbima.com')->send(new QuoteMail());
-//        Mail::to('allan@qatarbima.com')->send(new QuoteMail());
-//        Mail::to('m.saleh@qatarbima.com')->send(new QuoteMail());
+        Mail::to('m.ramadan@qatarbima.com')->send(new QuoteMail($data));
+        Mail::to('allan@qatarbima.com')->send(new QuoteMail($data));
+        Mail::to('m.saleh@qatarbima.com')->send(new QuoteMail($data));
         Mail::to('maria@qatarbima.com')->send(new QuoteMail($data));
 //      QuoteQueue::dispatch();
 
 //        return $this->sendWhatsAppMessage();
 
-//        Mail::to('mohamed@a.com')->send(new QuoteForClientMail());
+        Mail::to('mohamed@a.com')->send(new QuoteForClientMail());
 
-
-        dd($data);
+        return redirect()->back()->with(['success' => 'email send successfully']);
     }
 
 
