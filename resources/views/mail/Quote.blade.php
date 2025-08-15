@@ -16,3 +16,4 @@
 
 
 
+<a href="https://www.qatarbima.com/" target="_blank"><img src="{{ asset('BIMAPOSTER.jpg') }}" alt="Your Signature" width="652" height="108"></a>

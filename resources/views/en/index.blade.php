@@ -3,13 +3,15 @@
 
 <head>
     <!-- page title -->
-    <title>index</title>
+    <title>Qatar Bima</title>
     <!-- support languages -->
     <meta charset="utf-8">
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- aos animate -->
     <link href="{{asset('app/static/plugins/aos/css/aos.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{asset('app/assets/images/icons/logo.png')}}" type="image/x-icon">
+
     <!-- font awesome -->
     <link href="{{asset('app/static/plugins/fontawesome-free-6.4.2-web/css/all.min.css')}}" rel="stylesheet">
     <!-- bootstrap -->
@@ -67,7 +69,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-9 col-12 text-lg-end">
-                    <a href="/contact"><i class="fa-solid fa-location-dot me-2"></i>contact us</a>
+                    <a href="/en/contact"><i class="fa-solid fa-location-dot me-2"></i>contact us</a>
                     <a href="mailto:info@qatarbima.com"><i
                             class="fa-solid fa-envelope me-2"></i>info@qatarbima.com</a>
                     <a href="tel:+974 5053 5033"><i class="fa-brands fa-whatsapp me-2 text-success h5"></i><i
@@ -108,21 +110,27 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="travel_medical" role="button"
+                        <a class="nav-link dropdown-toggle" href="{{App::getLocale() . '/travel_medical'}}"
+                           role="button"
                            data-hover="dropdown" aria-expanded="false">Travel & Medical</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="travel_medical/travel_insurance">travel
+                            <li><a class="dropdown-item"
+                                   href="{{App::getLocale() . '/travel_medical/travel_insurance'}}">travel
                                     outbound</a></li>
-                            <li><a class="dropdown-item" href="travel_medical/travel_insurance">hayya
+                            <li><a class="dropdown-item"
+                                   href="{{App::getLocale() . '/travel_medical/travel_insurance'}}">hayya
                                     card</a></li>
-                            <li><a class="dropdown-item" href="travel_medical/travel_insurance">visit
+                            <li><a class="dropdown-item"
+                                   href="{{App::getLocale() . '/travel_medical/travel_insurance'}}">visit
                                     visa</a></li>
-                            <li><a class="dropdown-item" href="travel_medical/medical_insurance">+60
+                            <li><a class="dropdown-item"
+                                   href="{{App::getLocale() . '/travel_medical/medical_insurance'}}">+60
                                     medical</a></li>
                             <li><a class="dropdown-item"
-                                   href="travel_medical/medical_insurance">residents mandatory
+                                   href="{{App::getLocale() . '/travel_medical/medical_insurance'}}">residents mandatory
                                     medical</a></li>
-                            <li><a class="dropdown-item" href="travel_medical/medical_insurance">Group
+                            <li><a class="dropdown-item"
+                                   href="{{App::getLocale() . '/travel_medical/medical_insurance'}}">Group
                                     Health Insurance</a></li>
                         </ul>
                     </li>
@@ -244,7 +252,7 @@
                                 <img src="{{asset('app/assets/images/icons/home/motor.png')}}" class="img-fluid">
                             </div>
                             <h4>private motor</h4>
-                            <a href="private_motor" class="btn_sec">
+                            <a href="{{ '../'.App::getLocale() .'/private_motor'}}" class="btn_sec">
                                 <button class="btn">learn more</button>
                             </a>
                         </div>
@@ -253,7 +261,7 @@
                                 <img src="{{asset('app/assets/images/icons/home/travel.png')}}" class="img-fluid">
                             </div>
                             <h4>travel & medical</h4>
-                            <a href="travel_medical" class="btn_sec">
+                            <a href="{{ '../'.App::getLocale() .'/travel_medical'}}" class="btn_sec">
                                 <button class="btn">learn more</button>
                             </a>
                         </div>
@@ -262,7 +270,7 @@
                                 <img src="{{asset('app/assets/images/icons/home/personal.png')}}" class="img-fluid">
                             </div>
                             <h4>personal insurance</h4>
-                            <a href="personal_insurance" class="btn_sec">
+                            <a href="{{ '../'.App::getLocale() .'/personal_insurance'}}" class="btn_sec">
                                 <button class="btn">learn more</button>
                             </a>
                         </div>
@@ -271,7 +279,7 @@
                                 <img src="{{asset('app/assets/images/icons/home/business.png')}}" class="img-fluid">
                             </div>
                             <h4>business insurance</h4>
-                            <a href="business_insurance" class="btn_sec">
+                            <a href="{{ '../'.App::getLocale() .'/business_insurance'}}" class="btn_sec">
                                 <button class="btn">learn more</button>
                             </a>
                         </div>
@@ -309,10 +317,7 @@
                                     src="{{asset('app/assets/images/partners/GIG Gulf logo 2023 - PNG File.png')}}"
                                     class="img-fluid"></div>
                         </div>
-                        <div class="item">
-                            <div class="img-container"><img src="{{asset('app/assets/images/partners/Misr.png')}}"
-                                                            class="img-fluid"></div>
-                        </div>
+                        
                         <div class="item">
                             <div class="img-container"><img
                                     src="{{asset('app/assets/images/partners/new-final-logo-ar lic.jpg')}}"
@@ -386,7 +391,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-service">
                         <i class="fa-solid fa-hand-holding-dollar"></i>
-                        <h3>COMPETETIVE PRICE</h3>
+                        <h3>COMPETITIVE PRICE</h3>
                         <p>Our priority is to find the right coverage matches your situation, then don’t worry about
                             the cost as We offer a wide variety of policies covers a range of prices.</p>
                     </div>
@@ -401,6 +406,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-6 col-12 mb-md-0 mb-3">
                 <form class="contact-form" id="quote" method="post" action="{{route('getQuote', App::getLocale())}}">
+
+
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -443,6 +450,9 @@
                                           placeholder="how can we help" required></textarea>
                         </div>
                     </div>
+                    {!! NoCaptcha::renderJs() !!}
+                    <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+                    <br>
                     <button class="btn" type="submit">submit</button>
                 </form>
             </div>
@@ -513,6 +523,10 @@
                                    aria-describedby="subscribe" name="subscriber_email">
                             <button class="btn" type="submit" id="subscribe">subscribe</button>
                         </div>
+                        {!! NoCaptcha::renderJs() !!}
+                    
+                        <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+
                         @if(session()->has('error'))
                             <div class="alert alert-danger">{{session()->get('error')}}</div>
                         @endif

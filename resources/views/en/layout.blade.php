@@ -3,11 +3,12 @@
 
 <head>
     <!-- page title -->
-    <title>Bima</title>
+    <title>Qatar Bima</title>
     <!-- support languages -->
     <meta charset="utf-8">
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{asset('app/assets/images/icons/logo.png')}}" type="image/x-icon">
     <!-- aos animate -->
     <link href="{{asset('app/static/plugins/aos/css/aos.css')}}" rel="stylesheet">
     <!-- font awesome -->
@@ -20,7 +21,7 @@
     <!-- website style -->
     <link rel="stylesheet" href="{{asset('app/static/css/style.min.css')}}">
 
-     <script type="text/javascript">
+    <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
         _smartsupp.key = '433672eff4d48a5b5e986d103a87178ff1bc746c';
         window.smartsupp || (function (d) {
@@ -104,6 +105,9 @@
                                           placeholder="how can we help" required></textarea>
                         </div>
                     </div>
+                    {!! NoCaptcha::renderJs() !!}
+                    <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+                    <br>
                     <button class="btn" type="submit">submit</button>
                 </form>
             </div>
@@ -174,6 +178,8 @@
                                    aria-describedby="subscribe" name="subscriber_email">
                             <button class="btn" type="submit" id="subscribe">subscribe</button>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+                        {!! NoCaptcha::renderJs() !!}
                         @if(session()->has('error'))
                             <div class="alert alert-danger">{{session()->get('error')}}</div>
                         @endif

@@ -61,7 +61,7 @@
                             <div class="col-lg-4 col-12">
                                 <div class="single-service">
                                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                                    <h3>COMPETETIVE PRICE</h3>
+                                    <h3>COMPETITIVE PRICE</h3>
                                     <p>Our priority is to find the right coverage matches your situation, then don’t
                                         worry about the cost as We offer a wide variety of policies covers a range of
                                         prices.</p>

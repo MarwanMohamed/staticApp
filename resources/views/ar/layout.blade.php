@@ -3,11 +3,13 @@
 
 <head>
     <!-- page title -->
-    <title>about us</title>
+    <title>Qatar Bima</title>
     <!-- support languages -->
     <meta charset="utf-8">
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{asset('app/assets/images/icons/logo.png')}}" type="image/x-icon">
+
     <!-- aos animate -->
     <link href="{{asset('app/static/plugins/aos/css/aos.css')}}" rel="stylesheet">
     <!-- font awesome -->
@@ -108,6 +110,9 @@
                                           placeholder="كيف يمكننا مساعدتك" required></textarea>
                         </div>
                     </div>
+                    {!! NoCaptcha::renderJs() !!}
+                    <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+                    <br>
                     <button class="btn" type="submit">إرسال</button>
                 </form>
             </div>
@@ -178,6 +183,9 @@
                                    aria-describedby="subscribe" name="subscriber_email">
                             <button class="btn" type="submit" id="subscribe">إشترك</button>
                         </div>
+
+                        {!! NoCaptcha::renderJs() !!}
+                        <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
                         @if(session()->has('error'))
                             <div class="alert alert-danger">{{session()->get('error')}}</div>
                         @endif
