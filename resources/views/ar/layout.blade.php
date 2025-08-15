@@ -170,7 +170,7 @@
                     <a href="{{ request()->root() .'/'.App::getLocale() .'/contact'}}" class="btn">تواصل معنا</a>
                 </div>
                 <div class="profile_link">
-                    <a href="https://drive.google.com/file/d/1nEQjIHtV1QtCiIk23zELeR3N86pZrqL6/view" class="btn"
+                    <a href="{{ asset('/pdf/company-profile.pdf') }}" class="btn"
                        download>أحصل على ملف الشركه<i class="fa-solid fa-cloud"><i
                                 class="fa-solid fa-arrow-down"></i></i></a>
                 </div>

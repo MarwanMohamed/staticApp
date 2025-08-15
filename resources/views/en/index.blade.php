@@ -317,7 +317,7 @@
                                     src="{{asset('app/assets/images/partners/GIG Gulf logo 2023 - PNG File.png')}}"
                                     class="img-fluid"></div>
                         </div>
-                        
+
                         <div class="item">
                             <div class="img-container"><img
                                     src="{{asset('app/assets/images/partners/new-final-logo-ar lic.jpg')}}"
@@ -510,7 +510,7 @@
                     <a href="{{ request()->root() .'/'.App::getLocale() .'/contact'}}" class="btn">contact us</a>
                 </div>
                 <div class="profile_link">
-                    <a href="https://drive.google.com/file/d/1nEQjIHtV1QtCiIk23zELeR3N86pZrqL6/view" class="btn"
+                    <a href="{{ asset('/pdf/company-profile.pdf') }}" class="btn"
                        download>get company profile <i class="fa-solid fa-cloud"><i
                                 class="fa-solid fa-arrow-down"></i></i></a>
                 </div>
@@ -524,7 +524,7 @@
                             <button class="btn" type="submit" id="subscribe">subscribe</button>
                         </div>
                         {!! NoCaptcha::renderJs() !!}
-                    
+
                         <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
 
                         @if(session()->has('error'))

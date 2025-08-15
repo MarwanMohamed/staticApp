@@ -20,12 +20,20 @@ Route::group(['prefix' => config()->get('app.locale')], function () {
     });
 
     Route::get('/{page}', function ($page) {
-        return view(App::getLocale() .'.'. $page);
+        if (! view()->exists($view = App::getLocale() . '.' . $page)) {
+            abort(404);
+        }
+
+        return view($view);
     });
 
 
       Route::get('/{folder}/{page}', function ($folder, $page) {
-        return view(App::getLocale() . '.'. $folder. '.'. $page);
+          if (! view()->exists($view = App::getLocale() . '.'. $folder. '.'. $page)) {
+              abort(404);
+          }
+
+          return view($view);
     });
 });
 

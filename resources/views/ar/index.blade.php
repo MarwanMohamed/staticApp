@@ -288,7 +288,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>عملائنا</h3>
+                    <h3>شركائنا</h3>
                 </div>
                 <div class="col-12">
                     <div class="slider" dir="ltr">
@@ -313,7 +313,7 @@
                                     src="{{asset('app/assets/images/partners/GIG Gulf logo 2023 - PNG File.png')}}"
                                     class="img-fluid"></div>
                         </div>
-                        
+
                         <div class="item">
                             <div class="img-container"><img
                                     src="{{asset('app/assets/images/partners/new-final-logo-ar lic.jpg')}}"
@@ -507,7 +507,7 @@
                     <a href="{{App::getLocale() . '/contact'}}" class="btn">تواصل معنا</a>
                 </div>
                 <div class="profile_link">
-                    <a href="https://drive.google.com/file/d/1nEQjIHtV1QtCiIk23zELeR3N86pZrqL6/view" class="btn"
+                    <a href="{{ asset('/pdf/company-profile.pdf') }}" class="btn"
                        download>أحصل على ملف الشركه<i class="fa-solid fa-cloud"><i
                                 class="fa-solid fa-arrow-down"></i></i></a>
                 </div>

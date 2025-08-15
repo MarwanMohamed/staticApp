@@ -23,7 +23,7 @@
         <div class="categories">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/private motor.png')}}" class="img-fluid">
@@ -34,7 +34,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/travel insurance.png')}}"
@@ -46,7 +46,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/medical insurance.png')}}"
@@ -58,7 +58,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/motorcycle.png')}}" class="img-fluid">
@@ -69,7 +69,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/watercraft.png')}}" class="img-fluid">
@@ -80,46 +80,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                        <div class="subcategory">
-                            <div class="img-container">
-                                <img src="{{asset('app/assets/images/icons/personal/renters.png')}}" class="img-fluid">
-                            </div>
-                            <h3>تأمين المستأجرين</h3>
-                            <a href="{{ '../../'.App::getLocale() .'/personal_insurance/renters_insurance'}}" class="more">
-                                <button class="btn">معرفة المزيد</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-md-4 col-12">
                         <div class="subcategory">
                             <div class="img-container">
                                 <img src="{{asset('app/assets/images/icons/personal/Landlords.png')}}" class="img-fluid">
                             </div>
                             <h3>تأمين المؤجرين</h3>
                             <a href="{{ '../../'.App::getLocale() .'/personal_insurance/landlords_insurance'}}" class="more">
-                                <button class="btn">معرفة المزيد</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                        <div class="subcategory">
-                            <div class="img-container">
-                                <img src="{{asset('app/assets/images/icons/personal/pet.png')}}" class="img-fluid">
-                            </div>
-                            <h3>تأمين الحيوانات الأليفة</h3>
-                            <a href="{{ '../../'.App::getLocale() .'/personal_insurance/pet_insurance'}}" class="more">
-                                <button class="btn">معرفة المزيد</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                        <div class="subcategory">
-                            <div class="img-container">
-                                <img src="{{asset('app/assets/images/icons/personal/flood.png')}}" class="img-fluid">
-                            </div>
-                            <h3>التأمين ضد مخاطر الفيضانات</h3>
-                            <a href="{{ '../../'.App::getLocale() .'/personal_insurance/flood_insurance'}}" class="more">
                                 <button class="btn">معرفة المزيد</button>
                             </a>
                         </div>
