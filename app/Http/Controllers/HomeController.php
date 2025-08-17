@@ -21,8 +21,16 @@ class HomeController extends Controller
 
         $validator = Validator::make($request->all(), ['subscriber_email' => 'required|email']);
 
+        $validatorCapter = Validator::make($request->all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
         if ($validator->fails()) {
             return redirect()->to($previous)->with(['error' => trans('messages.subscriber_email.validation')]);
+        }
+
+        if ($validatorCapter->fails()) {
+            return redirect()->to($previous)->with(['error' => trans('The g-recaptcha-response field is required.')]);
         }
         try {
             if (Newsletter::isSubscribed($request->get('subscriber_email'))) {
@@ -45,6 +53,7 @@ class HomeController extends Controller
         $this->validate($request, [
             'first_name' => 'required', 'last_name' => 'required',
             'email' => 'required|email', 'phone' => 'required', 'text' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         $data = $request->all();

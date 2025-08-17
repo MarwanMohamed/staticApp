@@ -32,8 +32,8 @@ class QuoteQueue implements ShouldQueue
     {
         Mail::to('m.ramadan@qatarbima.com')->send(new QuoteMail($this->data));
         Mail::to('allan@qatarbima.com')->send(new QuoteMail($this->data));
-        Mail::to('m.saleh@qatarbima.com')->send(new QuoteMail($this->data));
         Mail::to('maria@qatarbima.com')->send(new QuoteMail($this->data));
-
+        Mail::to('afnan@qatarbima.com')->send(new QuoteMail($this->data));
+        Mail::to('jamal@qatarbima.com')->send(new QuoteMail($this->data));
     }
 }
