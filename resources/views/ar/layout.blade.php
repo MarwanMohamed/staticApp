@@ -123,7 +123,7 @@
                             <div class="gmap_canvas">
                                 <iframe class="gmap_iframe" width="100%" frameborder="0"
                                         scrolling="no" marginheight="0" marginwidth="0"
-                                        src="https://maps.google.com/maps?width=300&amp;height=190&amp;hl=en&amp;q=Office A - Tower B, 13th Floor,  Al Mana Twin Towers,    C-Ring Road, Bin Mahmoud,  Doha-Qatar. P.O. Box: 20794&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d273.63793300954126!2d51.508564973018196!3d25.277553524648116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c54be01a362f%3A0xaed3cebe0dd26e60!2sQatar%20Bima%20International!5e1!3m2!1sen!2ssa!4v1756082161067!5m2!1sen!2ssa"></iframe>
                                 <a
                                     href="https://connectionsgame.org/">Connections NYT</a></div>
                             <style>
